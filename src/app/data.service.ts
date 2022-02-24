@@ -18,6 +18,14 @@ getListBreweries(){
         catchError(this.handleError)
       );
 }
+
+getFilteredValues(city){
+  return this._http.get(this.getListBreweriesUrl+'?by_city='+ `${city}`)
+  .pipe(
+    retry(3),
+    catchError(this.handleError)
+  );
+}
 private handleError(error: HttpErrorResponse) {
   if ((error.status === 500) || (error.status === 404) ) { // can check other status as well.
     // A client-side or network error occurred. Handle it accordingly.

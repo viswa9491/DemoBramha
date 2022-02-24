@@ -4,11 +4,13 @@
 
 <div style="padding: 10px;" *ngIf="showTable">
   <!-- {{ breweriesData |json}} -->
+<div style="width: 50%;">
   <mat-form-field appearance="standard">
-    <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+    <mat-label>City Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Enter city" #input>
   </mat-form-field>
-  
+</div>
+
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>
   
