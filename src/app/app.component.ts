@@ -42,7 +42,7 @@ export class AppComponent  {
 
 
 //  method to filter  city information
-  applyFilter(event: Event, cityValue) {
+  applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
    // this.dataSource.filter = filterValue.trim().toLowerCase();
       if (this.dataSource.paginator) {
